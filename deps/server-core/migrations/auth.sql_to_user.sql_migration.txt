@@ -1,0 +1,17 @@
+# This change is required when you move your auth configuration (for server-reg
+# or server-core) from auth.sql to user.sql
+
+
+create table if not exists user (
+userid int not null primary key,
+username varchar(32) not null unique key,
+password varchar(128),
+accountStatus int default 1,
+mail varchar(64),
+mailVerified int default 0,
+syncNode varchar(64)
+);
+
+insert into user select id, username, password_hash, status, email, 0, null from users;
+
+drop table users;

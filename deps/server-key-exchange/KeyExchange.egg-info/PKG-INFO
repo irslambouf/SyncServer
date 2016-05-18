@@ -1,0 +1,18 @@
+Metadata-Version: 1.0
+Name: KeyExchange
+Version: 0.4
+Summary: J-Pake server
+Home-page: https://hg.mozilla.org/services/server-key-exchange
+Author: Tarek Ziade
+Author-email: tarek@mozilla.com
+License: MPL
+Description: ===================
+        Key Exchange Server
+        ===================
+        
+        Implementation of a key exchange server that can be used with protocols like
+        J-PAKE.
+        
+        See: https://wiki.mozilla.org/Services/Sync/SyncKey/J-PAKE
+        
+Platform: UNKNOWN

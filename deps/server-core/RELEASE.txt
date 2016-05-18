@@ -1,0 +1,223 @@
+2.13 - 2013-04-29
+=================
+
+Impacts:
+
+- Ops
+- QA
+
+Dependencies: None
+
+Relevant Changes:
+
+This release includes the new User backend "ProxyCacheUser", designed to
+help with standing up services inside external infra such as AWS.  It also
+changes the SQLUser backend to use scrypt for password hashing by default.
+
+Bug 865107 - ProxyCacheUser backend, for authing from within AWS
+
+
+2.12 - 2012-10-19
+=================
+
+Impacts:
+
+- Ops
+- QA
+
+Dependencies: None
+
+Relevant Changes:
+
+This release includes better handling of MySQL "query execution interrupted"
+errors and support for the latest version of metlog-cef.
+
+Bug 624791 - MySQL "query execution interrupted" errors should produce a 503
+Bug 800163 - use new API provided by metlog-cef v0.2
+
+
+2.11 - 2012-10-11
+=================
+
+Impacts:
+
+- Ops
+- QA
+
+Dependencies: None
+
+Relevant Changes:
+
+This release includes some helpful debugging facilities, including the ability
+to dump memory usage data and some additional logging.  It also updates the
+dependencies to latest released versions, in particular the version of
+SQLAlchemy goes from 0.6.6 to 0.7.9.
+
+Bug 799874 - dump gunicorn memory usage data on SIGUSR2
+Bug 784567 - log reason for all authentication failures
+Bug 784926 - use metlog for CEF logging
+Bug 648607 - special-case handling of "lock wait timeout" errors
+
+
+2.10 - 2012-08-29
+=================
+
+Impacts:
+
+- Ops
+- QA
+
+Dependencies: None
+
+Relevant Changes:
+
+Bug 786178 - Custom gunicorn worker with support for gevent-blocking-detection
+Bug 781451 - Log greenlets that block the event loop for too long
+Bug 774392 - Support for Method Not Allowed in requests
+Bug 761315 - CatchErrorMiddleware should escape user-provided data
+Bug 774848 - Remove version requirement on sqlalchemy <= 0.6.99
+Bug 772716 - log user id and request processing time for each request
+Bug 689511 - Allow to disable creating new user accounts in server-full
+
+
+2.7 - 2011-10-18
+================
+
+Impacts:
+
+- Ops
+- QA
+
+Relevant changes:
+
+A whole lot. Reconfiguration of a whole bunch of libraries, including how we handle authentication, configuration and where utility functions live. Rewritten testing support libraries.
+
+Any product that moves to this core should check all functionality to see if anything breaks.
+
+
+2.1 - 2011-06-24
+================
+
+Impacts:
+
+- Ops
+
+Relevant Changes:
+
+Bug 662859 - Adding node checking
+
+1.7 - 2011-06-14
+================
+
+Impacts:
+
+- Ops
+- QA
+
+Dependencies: None
+
+Relevant Changes:
+
+Bug 663911 - transitional writes to ldap for syncNode
+Bug 661247 - cleaned up encoding in mail headers
+
+1.3 - 2011-05-25
+================
+
+Impacts:
+
+- Ops
+- Infrasec
+- QA
+
+Dependencies: None
+
+Relevant Changes:
+
+- Bug 621283 - unicode passwords result in python traceback on reg
+
+
+1.2 - 2011-05-10
+================
+
+Impacts:
+
+- Ops
+- Infrasec
+- QA
+
+Dependencies:
+
+- None
+
+Relevant changes:
+
+- Bug 655281 - add an admin_update_password
+
+
+
+
+1.0-4 - 2011-04-28
+==================
+
+Impacts:
+
+- Ops
+- QA
+
+Dependencies:
+
+- None
+
+Relevant changes:
+
+ - Bug 646945 (and all dependent bugs) - reconfigure LDAP to use new DN
+
+
+1.0-1 - 2011-11-03
+==================
+
+Impacts:
+
+- Ops
+
+Dependencies:
+
+- None
+
+Relevant changes:
+
+- Bug 638043 - Obfuscate passwords in __debug__
+
+
+0.2-15 - 2011-02-28
+===================
+
+Impacts:
+
+- Ops
+
+Dependencies:
+
+- None
+
+Relevant changes:
+
+- Bug 636294 - Prevent the automatic creation of the tables
+- now using the standalone cef lib
+
+0.2-14 - 2011-02-23
+===================
+
+Impacts:
+
+- Ops
+- QA
+
+Dependencies:
+
+- None
+
+Relevant changes:
+
+- 635893 - Fix the pool behavior on unbindings

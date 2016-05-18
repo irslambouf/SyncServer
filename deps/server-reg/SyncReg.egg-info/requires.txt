@@ -1,0 +1,9 @@
+SQLAlchemy
+PasteDeploy
+WebOb
+Mako
+recaptcha-client
+Routes
+simplejson
+Services>=2.0
+cef

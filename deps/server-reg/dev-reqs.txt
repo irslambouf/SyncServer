@@ -1,0 +1,24 @@
+cef
+docopt
+WebOb == 1.0.7
+WebTest == 1.4.3
+Paste
+PasteDeploy
+PasteScript
+Mako
+MarkupSafe
+Beaker
+PyMySQL
+pymysql_sa
+python-memcached
+simplejson
+Routes
+SQLAlchemy <= 0.7.999
+WSGIProxy
+recaptcha-client
+metlog-py
+metlog-cef
+repoze.lru
+zope.deprecation
+zope.interface
+scrypt

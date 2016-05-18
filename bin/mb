@@ -1,0 +1,10 @@
+#!/home/philippe/server-full/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'metlog-py','console_scripts','mb'
+__requires__ = 'metlog-py'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('metlog-py', 'console_scripts', 'mb')()
+    )

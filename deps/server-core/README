@@ -1,0 +1,45 @@
+=========
+Sync Core
+=========
+
+Core library that provides these features:
+
+- Config reader/writer
+- Plugin system
+- Base WSGI application for Sync servers
+- Error codes for Sync
+- Authentication back ends for Sync
+- Event registry
+
+
+Metlog
+------
+
+Use of the 'Metlog' metrics and logging system can be configured in your sync
+application's sync.conf file. You will need to add a section [metlog_loader]
+that looks something like this::
+
+    [metlog_loader]
+    backend = services.metrics.MetlogLoader
+    config = /path/to/this/sync.conf
+
+And also a [metlog] section::
+
+    [metlog]
+    sender_class = metlog.senders.zmq.ZmqPubSender
+    sender_bindstrs = tcp://localhost:5585
+
+The [metlog] section must define a set of keys prefixed with "sender_".  The
+most important one of these is the "sender_class" which defines the classname
+of the metlog sender. All other 'sender_' prefixed keys will be passed into the
+constructor of the sender with the prefix stripped away.
+
+If these are left out, the metlog client will default to passing messages to
+Python's `logging` standard library module.
+
+In either case, the metlog client will be available from the application object
+as the `logger` attribute. If you don't have access to the application object,
+you can get the client from Metlog's `CLIENT_HOLDER` object like so::
+
+    from metlog.holder import CLIENT_HOLDER
+    logger = CLIENT_HOLDER.default_client

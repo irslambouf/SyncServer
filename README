@@ -1,0 +1,32 @@
+= Note =
+
+This is the server component for Mozilla's legacy sync system, which
+has been deprecated and will be shut down after September 2015:
+
+  https://blog.mozilla.org/services/2015/07/31/shutting-down-the-legacy-sync-service/
+
+For the code behind the new sync system, see:
+
+  https://github.com/mozilla-services/syncserver
+
+
+= Sync =
+
+The Python Sync Server is composed of four parts:
+
+* ''server-core'': library containing various helpers. 
+* ''server-storage'': the storage server. 
+* ''server-reg'': the user registration/management server.
+* ''server-full'': a server that reunites the server and the user servers so
+you can run everything in a single box.
+
+
+= Running The Sync Server =
+
+Please refer to the online documentation at http://docs.services.mozilla.com/howtos/run-sync.html
+
+== More documentation, Feedback ==
+
+- Dev guide: http://docs.services.mozilla.com
+- IRC channel: #sync. See http://irc.mozilla.org/
+- Mailing list: https://mail.mozilla.org/admin/services-dev

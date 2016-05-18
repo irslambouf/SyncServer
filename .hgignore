@@ -1,0 +1,14 @@
+mako.py$
+pyc$
+lib
+include
+bin
+SyncServer.egg-info
+swp$
+html
+doc/build
+\.coverage
+\.channel
+man
+nosetests.xml
+test

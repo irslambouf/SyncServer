@@ -1,0 +1,3 @@
+[console_scripts]
+buildapp = mopytools.build_app:main
+buildrpms = mopytools.build_rpms:main

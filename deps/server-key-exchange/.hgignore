@@ -1,0 +1,15 @@
+html
+lib
+bin
+include
+man
+dist
+build
+.channel
+.*egg-info
+.*egg
+.*pyc
+.*mako\.py
+.Python
+nosetests.xml
+pip-selfcheck.json

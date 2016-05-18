@@ -1,0 +1,10 @@
+#!/home/philippe/server-full/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'PasteScript','console_scripts','paster'
+__requires__ = 'PasteScript'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('PasteScript', 'console_scripts', 'paster')()
+    )

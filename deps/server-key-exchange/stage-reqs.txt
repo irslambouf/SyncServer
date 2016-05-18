@@ -1,0 +1,20 @@
+cef == 0.5
+WebOb == 1.0
+WebTest == 1.4.3
+Paste == 1.7.5.1
+PasteDeploy == 1.3.4
+PasteScript == 1.7.3
+Mako == 0.3.4
+MarkupSafe == 0.12
+Beaker == 1.5.4
+python-memcached == 1.53
+simplejson == 2.1.1
+Routes == 1.12.3
+SQLAlchemy == 0.6.6
+MySQL-python == 1.2.3
+WSGIProxy == 0.2.2
+metlog-py == 0.9.8
+metlog-cef == 0.2
+# The scrypt package doesn't play nice with pypi2rpm
+# so we install it manually in the makefile.
+# scrypt == 0.6.1

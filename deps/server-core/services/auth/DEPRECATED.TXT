@@ -1,0 +1,4 @@
+This package is deprecated in favor of the services.user package.
+
+Unless you're doing an upgrade, you probably don't want to be looking
+in here.
